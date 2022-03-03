@@ -1,4 +1,4 @@
-package userService.src.main.java.com.SofeiAndreiPOC.userService.controller;
+package com.SofeiAndreiPOC.userService.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
