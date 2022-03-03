@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+
+spring:
+  data:
+    mongodb:
+      authentication-database: "admin"
+      username: rootuser
+      password: rootpass
+      database: pocandrei
+      port: 27017
+      host: localhost
