@@ -1,13 +1,14 @@
 server:
   port: 7001
 
-
 spring:
-  data:
-    mongodb:
-      authentication-database: admin
-      username: rootuser
-      password: rootpass
-      database: pocandrei
-      port: 27017
-      host: localhost
+  data-source:
+    url: jdbc:mysql://localhost:1604/poc?useSSL=false
+    username: root
+    password: sofeiandrei
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update

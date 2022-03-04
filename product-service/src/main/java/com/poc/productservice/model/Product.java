@@ -1,32 +1,28 @@
 package com.poc.productservice.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.*;
 
 @Data
-@Document
-@AllArgsConstructor
+@Entity
+@Table(name="products")
 public class Product {
     @Id
-    private int productId;
-    private String Name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long productId;
+    @Column(name = "name")
+    private String name;
     //private type?? image;
+    @Column(name = "brand")
     private String brand;
+    @Column(name = "category")
     private String category;
+    @Column(name = "description")
     private String description;
+    @Column(name = "rating")
     private int rating;
+    @Column(name = "price")
     private double price;
+    @Column(name = "countInStock")
     private int countInStock;
-
-    public Product(String name, String brand, String category, String description, int rating, double price, int countInStock) {
-        Name = name;
-        this.brand = brand;
-        this.category = category;
-        this.description = description;
-        this.rating = rating;
-        this.price = price;
-        this.countInStock = countInStock;
-    }
 }
