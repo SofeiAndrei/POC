@@ -1,0 +1,14 @@
+server:
+  port: 7002
+
+spring:
+  data-source:
+    url: jdbc:mysql://localhost:1604/poc?useSSL=false
+    username: root
+    password: sofeiandrei
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
